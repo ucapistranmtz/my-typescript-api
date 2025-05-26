@@ -1,0 +1,34 @@
+{
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^@services/(.*)$": "<rootDir>/src/services/$1",
+      "^@utils/(.*)$": "<rootDir>/src/utils/$1",
+      "^@validations/(.*)$": "<rootDir>/src/validations/$1",
+      "^@models/(.*)$": "<rootDir>/src/models/$1",
+      "^@middleware/(.*)$": "<rootDir>/src/middleware/$1",
+      "^@controllers/(.*)$": "<rootDir>/src/controllers/$1",
+      "^@dtos/(.*)$": "<rootDir>/src/dtos/$1"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/types/**/*.{ts,tsx}",
+      "!src/**/*.d.ts"
+    ]
+  }
+}

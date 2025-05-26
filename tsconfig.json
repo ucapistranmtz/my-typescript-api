@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true, // Enable experimental decorators
+    "emitDecoratorMetadata": true, // Emit metadata for decorators
+    "target": "ES2021", // Support modern JS features
+    "lib": ["ES2021"], // Include ES2021 library
+    "module": "CommonJS", // Required for Node.js
+    "moduleResolution": "node", // Resolve imports like Node does
+    "outDir": "./dist", // Compiled JS output folder
+    "rootDir": "./src", // Your source code folder
+    "strict": true, // Enable all strict type checks
+    "esModuleInterop": true, // Allow default imports (e.g., express)
+    "forceConsistentCasingInFileNames": true, // Prevent case mismatch bugs
+    "skipLibCheck": true, // Skip type checking node_modules
+    "resolveJsonModule": true, // Allow importing .json files
+    "baseUrl": "./src",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "paths": {
+      "@controllers/*": ["controllers/*"], // Aliases for controllers
+      "@models/*": ["models/*"], // Aliases for models
+      "@routes/*": ["routes/*"], // Aliases for routes
+      "@middlewares/*": ["middlewares/*"], // Aliases for middlewares
+      "@utils/*": ["utils/*"], // Aliases for utils
+      "@config/*": ["config/*"], // Aliases for config
+      "@services/*": ["services/*"], // Aliases for services
+      "@helpers/*": ["helpers/*"], // Aliases for helpers
+      "@validations/*": ["validations/*"], // Aliases for validations
+      "@constants/*": ["constants/*"], // Aliases for constants
+      "@tests/*": ["tests/*"], // Aliases for tests
+      "@mocks/*": ["mocks/*"] // Aliases for mocks
+    }
+  },
+  "include": ["src/**/*", "src", "src/types/"], // Compile only the src/ folder
+  "exclude": ["node_modules", "dist"] // Ignore these folders
+}
